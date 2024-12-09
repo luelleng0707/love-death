@@ -1,0 +1,203 @@
+/* General body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+    background-color: black;
+    width: cover;
+}
+.sticky-title {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    z-index: 3; /* Higher than video and content */
+    text-transform: uppercase;
+    width: 100%;
+}
+ /* Non-sticky h3 element */
+ .subheading {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: gray;
+}
+.title-section {
+    position: static;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.title-section > h1{
+    color: white;
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: bold;
+    width: 80%;
+}
+
+.subtitle {
+    top: 80%;
+    font-size: 1rem;
+    padding-top: 10px;
+    font-style: italic;
+    margin-top: 10px;
+    width: 90%;
+}
+.romeo-juliet .subtitle  {
+    color: rgb(172, 126, 126);
+}
+.chava .subtitle {
+    font: #5a5f65;
+}
+.lust-caution  .subtitle {
+    color: rgb(172, 126, 126);
+}
+/* Full-screen video container */
+.video {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100vw;  /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Cover entire screen without distortion */
+    z-index: 1;
+}
+
+/* Center the play button on the video */
+#play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px; /* Small play button */
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 2; /* Ensure the button is above the video */
+}
+
+/* Play icon inside the button */
+.play-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* Full-screen sections (quote and explanation) */
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    margin: auto;
+    padding: 50px 0px;
+}
+
+/* Quote Section - Background Image */
+.romeo-juliet > .quote-section {
+    box-shadow: inset 0px 0px 40px 40px #9B111E;
+}
+.chava > .quote-section {
+    box-shadow: inset 0px 0px 40px 40px #5F9EA0;
+}
+.lust-caution > .quote-section {
+    box-shadow: inset 0px 0px 40px 40px #2F4F4F ;
+}
+.hidden {
+    opacity: 0;
+}
+
+/* Quote Section */
+.quote-section {
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This keeps the background "standing still" */
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Style for p element inside the quote-section */
+.quote-section p {
+    position: absolute;
+    bottom: 5%; /* Align to the bottom */
+    left: 2%; /* Align to the left */
+    width: 15%; /* Restrict width to 15% */
+    font-size: 1.2rem;
+    color: white;
+    text-align: left;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Explanation Section - Solid Color Background */
+.explanation-section {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s, transform 1s;
+    transform: translateY(50px);/* Initially offset the element */
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0; /* Initially offset the explanation */
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0); /* Smooth transition for the appearance */
+}
+
+/* Explanation Text - Centered both horizontally and vertically */
+.explanation-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 70%; /* Adjusted for centering */
+    box-sizing: border-box;
+    max-width: 800px;
+    margin: 0; /* Remove margin for better centering */
+    position: relative;
+    top: 0; /* Adjusted for centering */
+}
+
+/* Title Section */
+
+/* Specific section background colors */
+.romeo-juliet {
+    background-color: #9B111E; 
+}
+
+.chava {
+    background-color: #2b8da6; 
+}
+
+.lust-caution {
+    background-color: #164e4e; 
+}
+#embed-preview-iframe {
+    width: 100%;
+    height:500px;
+    border:0px solid #67001a;
+    transition:.3s;
+    border-radius:4px;
+    max-width:700px 
+}
+.transition {}
