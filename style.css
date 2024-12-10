@@ -16,6 +16,7 @@ body {
     box-sizing: inherit;
 }
 
+/* Sticky Title */
 .sticky-title {
     position: -webkit-sticky; /* For Safari */
     position: sticky;
@@ -31,7 +32,7 @@ body {
     width: 100%;
 }
 
-/* Non-sticky h3 element */
+/* Non-sticky subheading */
 .subheading {
     margin-top: 20px;
     padding: 10px;
@@ -40,20 +41,23 @@ body {
     color: gray;
 }
 
+/* Title section */
 .title-section {
     position: static;
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 5%;
 }
 
-@media screen and (min-width: 350px) and (max-width: 499px) {
+@media screen and (min-width: 150px) and (max-width: 499px) {
     .title-section > h1 {
         color: white;
         text-transform: uppercase;
         font-size: 3rem;
         font-weight: bold;
+        left: 20px;
     }
 }
 
@@ -63,9 +67,11 @@ body {
         text-transform: uppercase;
         font-size: 5rem;
         font-weight: bold;
+        left: 5%;
     }
 }
 
+/* Subtitle */
 .subtitle {
     top: 80%;
     font-size: 1rem;
@@ -75,39 +81,39 @@ body {
     width: 90%;
 }
 
-/* Full-screen video container */
+/* Full-screen video */
 .video {
     position: static;
     top: 0;
     left: 0;
-    width: 100vw;  /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    object-fit: cover; /* Cover entire screen without distortion */
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
     z-index: 1;
 }
 
-/* Center the play button on the video */
+/* Play button */
 #play-button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 5%; /* Small play button */
+    width: 5%;
     height: 5%;
     border: none;
     background: transparent;
     cursor: pointer;
-    z-index: 2; /* Ensure the button is above the video */
+    z-index: 2;
 }
 
-/* Play icon inside the button */
+/* Play icon */
 .play-icon {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-/* Full-screen sections (quote and explanation) */
+/* Section styles */
 section {
     display: grid;
     place-items: center;
@@ -116,7 +122,7 @@ section {
     padding: 50px 0px;
 }
 
-/* Subtitle styles for specific sections */
+/* Subtitle for sections */
 .romeo-juliet .subtitle {
     color: rgb(214, 177, 177);
 }
@@ -129,33 +135,32 @@ section {
     color: #96c9c9;
 }
 
-/* Quote Section - Background Image */
+/* Quote Section */
+/* Quote Section */
 .quote-section {
     height: 100vh;
     position: relative;
     z-index: 1;
-    background-size: cover;
+    background-size: cover; /* Ensures the background image fills the section */
     background-position: center;
-    background-attachment: scroll; /* Fixed for larger screens */
-    width: 100%;
+    background-attachment: scroll;
+    width: 100vw; /* Full width of the viewport */
     margin-bottom: 30px;
     padding: 20px;
-    box-sizing: border-box;
 }
-
-/* Media query to adjust for mobile */
+/* Adjustments for desktop */
 @media screen and (min-width: 768px) {
     .quote-section {
-        background-attachment: fixed; /* Disable fixed attachment on mobile */
+        background-attachment: fixed;
     }
 }
 
-/* Style for p element inside the quote-section */
+/* Quote section text */
 .quote-section p {
     position: absolute;
-    bottom: 5%; /* Align to the bottom */
-    left: 2%; /* Align to the left */
-    width: 15%; /* Restrict width to 15% */
+    bottom: 5%;
+    left: 5%;
+    width: 15%;
     font-size: 1rem;
     color: white;
     text-align: left;
@@ -163,39 +168,38 @@ section {
     line-height: 1.5;
 }
 
-/* Explanation Section - Solid Color Background */
+/* Explanation section */
 .explanation-section {
     height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: opacity 1s, transform 1s;
-    transform: translateY(50px); /* Initially offset the element */
-    opacity: 0; /* Initially hidden */
-    margin: 20% 0; /* Adjust margin */
+    transform: translateY(50px);
+    opacity: 0;
+    margin: 20% 0;
 }
 
 .show {
     opacity: 1;
-    transform: translateY(0); /* Smooth transition for the appearance */
+    transform: translateY(0);
 }
 
-/* Explanation Text - Centered both horizontally and vertically */
+/* Explanation text */
 .explanation-text {
     font-size: 1.2rem;
     line-height: 1.5;
     color: white;
     text-align: center;
     padding: 20px;
-    width: 70%; /* Adjusted for centering */
+    width: 70%;
     box-sizing: border-box;
     max-width: 800px;
-    margin: 0; /* Remove margin for better centering */
+    margin: 0;
     position: relative;
-    top: 0; /* Adjusted for centering */
 }
 
-/* Shadow for different sections */
+/* Shadow effects */
 .romeo-juliet > .quote-section {
     box-shadow: inset 0px 0px 40px 40px #9B111E;
 }
@@ -208,7 +212,7 @@ section {
     box-shadow: inset 0px 0px 40px 40px #164e4e;
 }
 
-/* Specific section background colors */
+/* Section background colors */
 .romeo-juliet {
     background-color: #9B111E;
 }
@@ -221,7 +225,7 @@ section {
     background-color: #164e4e;
 }
 
-/* Hidden class for elements not initially visible */
+/* Hidden class for initially invisible elements */
 .hidden {
     opacity: 0;
 }
