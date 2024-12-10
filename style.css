@@ -40,7 +40,6 @@ body {
     color: gray;
 }
 
-
 .title-section {
     position: static;
     height: 80vh;
@@ -49,25 +48,24 @@ body {
     align-items: center;
 }
 
-@media screen and (min-width: 350px)  and (max-width:499px){
-    
+@media screen and (min-width: 350px) and (max-width: 499px) {
     .title-section > h1 {
         color: white;
         text-transform: uppercase;
         font-size: 3rem;
         font-weight: bold;
     }
-    }
+}
 
 @media screen and (min-width: 500px) {
-    
-.title-section > h1 {
-    color: white;
-    text-transform: uppercase;
-    font-size: 5rem;
-    font-weight: bold;
+    .title-section > h1 {
+        color: white;
+        text-transform: uppercase;
+        font-size: 5rem;
+        font-weight: bold;
+    }
 }
-}
+
 .subtitle {
     top: 80%;
     font-size: 1rem;
@@ -117,61 +115,39 @@ section {
     margin: auto;
     padding: 50px 0px;
 }
-.romeo-juliet .subtitle  {
-    color: rgb(214, 177, 177)
+
+/* Subtitle styles for specific sections */
+.romeo-juliet .subtitle {
+    color: rgb(214, 177, 177);
 }
 
 .chava .subtitle {
     color: #93c7d3;
 }
 
-.lust-caution  .subtitle {
+.lust-caution .subtitle {
     color: #96c9c9;
 }
 
 /* Quote Section - Background Image */
-.romeo-juliet > .quote-section {
-    box-shadow: inset 0px 0px 40px 40px #9B111E;
-}
-
-.chava > .quote-section {
-    box-shadow: inset 0px 0px 40px 40px #2b8da6;
-}
-
-.lust-caution > .quote-section {
-    box-shadow: inset 0px 0px 40px 40px #164e4e;
-}
-/* Specific section background colors */
-.romeo-juliet {
-    background-color: #9B111E;
-}
-
-.chava {
-    background-color: #2b8da6;
-}
-
-.lust-caution {
-    background-color: #164e4e;
-}
-
-
-.hidden {
-    opacity: 0;
-}
-
-/* Quote Section */
 .quote-section {
     height: 100vh;
     position: relative;
     z-index: 1;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Fills the container, but could stretch the image */
-/* This keeps the background "standing still" */
+    background-attachment: scroll; /* Fixed for larger screens */
     width: 100%;
     margin-bottom: 30px;
     padding: 20px;
     box-sizing: border-box;
+}
+
+/* Media query to adjust for mobile */
+@media screen and (min-width: 768px) {
+    .quote-section {
+        background-attachment: fixed; /* Disable fixed attachment on mobile */
+    }
 }
 
 /* Style for p element inside the quote-section */
@@ -194,9 +170,9 @@ section {
     justify-content: center;
     align-items: center;
     transition: opacity 1s, transform 1s;
-    transform: translateY(50px);/* Initially offset the element */
-    transition: opacity 1s ease, transform 1s ease;
-    opacity: 0; /* Initially offset the explanation */
+    transform: translateY(50px); /* Initially offset the element */
+    opacity: 0; /* Initially hidden */
+    margin: 20% 0; /* Adjust margin */
 }
 
 .show {
@@ -217,4 +193,35 @@ section {
     margin: 0; /* Remove margin for better centering */
     position: relative;
     top: 0; /* Adjusted for centering */
+}
+
+/* Shadow for different sections */
+.romeo-juliet > .quote-section {
+    box-shadow: inset 0px 0px 40px 40px #9B111E;
+}
+
+.chava > .quote-section {
+    box-shadow: inset 0px 0px 40px 40px #2b8da6;
+}
+
+.lust-caution > .quote-section {
+    box-shadow: inset 0px 0px 40px 40px #164e4e;
+}
+
+/* Specific section background colors */
+.romeo-juliet {
+    background-color: #9B111E;
+}
+
+.chava {
+    background-color: #2b8da6;
+}
+
+.lust-caution {
+    background-color: #164e4e;
+}
+
+/* Hidden class for elements not initially visible */
+.hidden {
+    opacity: 0;
 }
