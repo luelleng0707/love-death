@@ -6,13 +6,6 @@ document.getElementById('play-button').addEventListener('click', function() {
     this.style.display = 'none'; // Hide the play button
 });
 
-// When the video finishes playing, show the content and allow scrolling
-document.getElementById('intro-video').addEventListener('ended', function() {
-    // Add scrollable class to body for scrolling
-    document.body.classList.add('scrollable');
-    document.querySelector('.content').classList.add('visible'); // Show the content
-});
-
 // IntersectionObserver for smooth transition
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
