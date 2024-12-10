@@ -166,7 +166,8 @@ section {
     z-index: 1;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* This keeps the background "standing still" */
+    background-attachment: fixed; /* Fills the container, but could stretch the image */
+/* This keeps the background "standing still" */
     width: 100%;
     margin-bottom: 30px;
     padding: 20px;
