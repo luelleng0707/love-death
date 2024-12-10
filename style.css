@@ -77,18 +77,6 @@ body {
     width: 90%;
 }
 
-.romeo-juliet .subtitle  {
-    color: rgb(172, 126, 126);
-}
-
-.chava .subtitle {
-    font: #5a5f65;
-}
-
-.lust-caution  .subtitle {
-    color: rgb(172, 126, 126);
-}
-
 /* Full-screen video container */
 .video {
     position: static;
@@ -128,6 +116,17 @@ section {
     align-content: center;
     margin: auto;
     padding: 50px 0px;
+}
+.romeo-juliet .subtitle  {
+    color: rgb(214, 177, 177)
+}
+
+.chava .subtitle {
+    color: #93c7d3;
+}
+
+.lust-caution  .subtitle {
+    color: #96c9c9;
 }
 
 /* Quote Section - Background Image */
