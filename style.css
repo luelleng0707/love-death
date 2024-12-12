@@ -79,27 +79,66 @@ body {
     font-style: italic;
     margin-top: 10px;
     width: 90%;
+    text-align: right;
+}
+@media screen and (min-width: 150px) and (max-width: 499px) {
+    .video {
+        position: static;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: 1;
+    }
+    .video video {
+        width: 100%;
+        height: 100%; /* Ensure the video takes full height */
+        object-fit: cover; /* Ensure the video covers the container */
+    }
+    
+    /* Play button */
+       #play-button {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);  /* Centers the button */
+        width: 50%;  /* Button size adjusted */
+        height: 50%;
+        border: none;
+        background: transparent;
+        z-index: 2;  /* Ensures button is on top of video */
+    }
+
+    /* Play icon */
+    .play-icon {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        opacity: 2; /* Slightly more visible on hover */
+    }
 }
 
-/* Full-screen video */
-.video {
-    position: static;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: 1;
-}
-
-/* Play button */
+@media screen and (min-width: 500px) {
+    .video {
+        position: static;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: fit-content; 
+        margin: 0 auto;
+    }
+    .video video {
+        width: 100%;
+    }
+    /* Play button */
 #play-button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 5%;
-    height: 5%;
+    width: 25%;
+    height: 25%;
     border: none;
     background: transparent;
     cursor: pointer;
@@ -111,7 +150,14 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    opacity: 0.5;
 }
+.play-icon:hover {
+    opacity: 1;
+}
+    
+}
+
 
 /* Section styles */
 section {
@@ -136,44 +182,63 @@ section {
 }
 
 /* Quote Section */
-/* Quote Section */
 .quote-section {
     height: 100vh;
     position: relative;
     z-index: 1;
     background-size: cover; /* Ensures the background image fills the section */
     background-position: center;
-    background-attachment: scroll;
-    width: 100vw; /* Full width of the viewport */
+    background-attachment: fixed;
+    width: 90vw; /* Full width of the viewport */
     margin-bottom: 30px;
     padding: 20px;
-}
-/* Adjustments for desktop */
-@media screen and (min-width: 768px) {
-    .quote-section {
-        background-attachment: fixed;
-    }
 }
 
 /* Quote section text */
 .quote-section p {
+    overflow: hidden; /* Ensures text is hidden when typed */
+    white-space: nowrap; /* Prevent text from wrapping */
+    width: 100%; /* Set the width to 20% of the section */
     position: absolute;
     bottom: 5%;
-    left: 5%;
-    width: 15%;
-    font-size: 1rem;
+    left: 5%; /* Adjust the left position */
+    font-size: 1.1rem;
     color: white;
     text-align: left;
-    margin: 0;
-    line-height: 1.5;
+}
+
+
+/* Shadow effects */
+.romeo-juliet > .quote-section p {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:  #9B111E;
+}
+
+.chava > .quote-section p {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #2b8da6;
+}
+
+.lust-caution > .quote-section p {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #164e4e;
+}
+.contemporary > .quote-section p {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #9E7A4D;
+}
+.future > .quote-section p {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #5D3F6A;
 }
 
 /* Explanation section */
 .explanation-section {
-    height: 50vh;
+    position: relative;
+    height: 10vh; /* You can increase this if you want more vertical space */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Horizontally centers content */
+    align-items: center; /* Vertically centers content */
     transition: opacity 1s, transform 1s;
     transform: translateY(50px);
     opacity: 0;
@@ -190,14 +255,35 @@ section {
     font-size: 1.2rem;
     line-height: 1.5;
     color: white;
-    text-align: center;
-    padding: 20px;
-    width: 70%;
+    text-align: center; /* Center the text horizontally */
+    width: 80%;
     box-sizing: border-box;
-    max-width: 800px;
-    margin: 0;
+    max-width: 900px;
+    margin: 0 auto;
     position: relative;
+    display: flex;
+    justify-content: center; /* Horizontally centers the paragraph */
+    align-items: center; /* Vertically centers the paragraph */
+    height: 100%; /* Ensures full height of the parent .explanation-text */
 }
+
+/* Optional: If the paragraph should have specific styling */
+.explanation-text p {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 150px) and (max-width: 499px) {
+    .explanation-text {
+        text-align: center;
+    }
+}
+@media screen and (min-width: 500px) {
+    .explanation-text {
+        text-align: justify;
+    }
+}
+
 
 /* Shadow effects */
 .romeo-juliet > .quote-section {
@@ -210,6 +296,12 @@ section {
 
 .lust-caution > .quote-section {
     box-shadow: inset 0px 0px 40px 40px #164e4e;
+}
+.contemporary > .quote-section {
+    box-shadow: inset 0px 0px 40px 40px #9A7A63;
+}
+.future > .quote-section {
+    box-shadow: inset 0px 0px 40px 40px #5D3F6A;
 }
 
 /* Section background colors */
@@ -224,8 +316,30 @@ section {
 .lust-caution {
     background-color: #164e4e;
 }
+.contemporary  {
+    background-color: #9A7A63;
+}
+.future  {
+    background-color: #5D3F6A;
+}
 
-/* Hidden class for initially invisible elements */
-.hidden {
-    opacity: 0;
+/* Full screen container to center the iframe */
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Take full viewport height */
+    width: 100vw; /* Take full viewport width */
+    padding-top: 150px;
+}
+
+/* Optional: Adjust iframe styling (if needed) */
+#embed-preview-iframe {
+    max-width: 100%;
+    width: 80%;
+    height: 500px;
+    border: 0;
+    border-radius: 4px;
+    transition: .3s;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15);
 }

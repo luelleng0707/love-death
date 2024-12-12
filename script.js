@@ -37,20 +37,27 @@ window.onload = function() {
                     if (sectionClass === 'romeo-juliet' && quoteSection.id == i) {
                         backgroundImage = `url('rj-scene${i}.jpg')`;
                     } else if (sectionClass === 'chava' && quoteSection.id == i) {
-                        backgroundImage = `url('chava-scene${i}.jpg')`;
+                        backgroundImage = `url('c-scene${i}.jpg')`;
                     } else if (sectionClass === 'lust-caution' && quoteSection.id == i) {
-                        backgroundImage = `url('lc-scene${i}.jpg')`;
+                        backgroundImage = `url('lc-scene${i}.png')`;
+                    } else if (sectionClass === 'contemporary' && quoteSection.id == i) {
+                        backgroundImage = `url('co-scene${i}.jpg')`;
+                    } else if (sectionClass === 'future' && quoteSection.id == i) {
+                        backgroundImage = `url('f-scene${i}.jpg')`;
                     }
                 } else {  // Mobile backgrounds
                     if (sectionClass === 'romeo-juliet' && quoteSection.id == i) {
                         backgroundImage = `url('rj-phone${i}.jpg')`;
                     } else if (sectionClass === 'chava' && quoteSection.id == i) {
-                        backgroundImage = `url('chava-scene-phone${i}.jpg')`;
+                        backgroundImage = `url('c-phone${i}.jpg')`;
                     } else if (sectionClass === 'lust-caution' && quoteSection.id == i) {
-                        backgroundImage = `url('lc-scene-phone${i}.jpg')`;
+                        backgroundImage = `url('lc-phone${i}.png')`;
+                    } else if (sectionClass === 'contemporary' && quoteSection.id == i) {
+                        backgroundImage = `url('co-phone${i}.jpg')`;
+                    } else if (sectionClass === 'future' && quoteSection.id == i) {
+                        backgroundImage = `url('f-phone${i}.jpg')`;
                     }
                 }
-
                 // Apply the background image to the current quote
                 if (quoteSection.id == i) {
                     quoteSection.style.backgroundImage = backgroundImage;
@@ -65,3 +72,26 @@ window.onload = function() {
     // Update background images when the window is resized
     window.addEventListener('resize', updateBackgroundImages);
 };
+
+// Window resize event for switching video sources
+window.addEventListener('resize', changeVideoSource);
+
+// Function to change video source based on screen size
+function changeVideoSource() {
+    const video = document.getElementById('intro-video');
+    const videoSource = document.getElementById('video-source');
+    
+    if (window.innerWidth > 500) {
+        // Switch to the laptop video if the screen width is larger than 500px
+        videoSource.src = 'video-laptop.mp4';
+    } else {
+        // Switch to the phone video for smaller screens
+        videoSource.src = 'video-phone.mp4';
+    }
+
+    // Reload the video to apply the new source
+    video.load();
+}
+
+// Call once to set the correct video on page load
+changeVideoSource();

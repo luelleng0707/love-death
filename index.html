@@ -8,7 +8,6 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-
     <!-- Sticky Title -->
     <div class="sticky-title">WHERE DOES LOVE STAND NOW</div>
 
@@ -16,14 +15,19 @@
     <h3 class="subheading">Besides the changing norms, in contrast to old romance to the present?</h3>
 
     <!-- Full-screen video -->
-    <video id="intro-video" class="video" autoplay>
-        <source src="video-phone.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <div class="video">
+        <video id="intro-video">
+            <source id="video-source" src="video-phone.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <button id="play-button"><img src="icon.svg" alt="Play Icon" class="play-icon"></button>
-    <p  style="margin: auto; width: 70%; position: relative; bottom: 60px;">
+    </div>    
+    <p style="margin: auto;width: 90%;position: relative;bottom: 20px;">
         The video above represents two couples that share how they met, this captures the evolving nature of love and it&apos;s place 
-        in changing societal norms, offering a compelling contrast to the depictions in <b>Romeo and Juliet, Chava,</b> and <b>Lust, caution</b>.
+        in changing societal norms, offering a compelling contrast to the depictions in <b>Romeo and Juliet, Chava,</b> and <b>Lust, caution</b>
+        The video highlights how love has transitioned from being shaped by external pressures to becoming a deeply personal, authentic connection,
+        reflecting both individual freedom and evolving values. 
+        In a world where love adapts, are we closer to true freedom in relationships, or have new norms simply replaced the old ones?
     </p>
 
     <!-- Title Section: Romeo and Juliet -->
@@ -35,47 +39,54 @@
         </div>
         
         <div class="quote-section" id="1">
-            <p><i>“Did my heart love till now? Forswear it, sight! For I ne&#39;er saw true beauty till this night.”</i> (Act 1, Scene 5)</p>
+            <p>
+                <b>
+                    <i>“Did my heart love till now? Forswear it, sight! 
+                    <br>For I ne&#39;er saw true beauty till this night.”</i> 
+                <br>(Act 1, Scene 5)
+                </b>
+            </p>
         </div>
         <div class="explanation-section">
             <div class="explanation-text">
-                <p>This reflects the intensity and immediacy of traditional romantic love. In contrast, modern love often emphasizes compatibility, communication, and gradual connection over instantaneous attraction.</p>
+                <p>This reflects the intensity and immediacy of traditional romantic love. 
+                    <br>In contrast, modern love often emphasizes compatibility, communication, and gradual connection over instantaneous attraction.</p>
             </div>
         </div>
         <div class="quote-section" id="2">
-            <p><i>“My bounty is as boundless as the sea, / My love as deep; the more I give to thee, / The more I have, for both are infinite.”</i> (Act 2, Scene 2)</p>
+            <p>
+                <b>
+                    <i>“These violent delights have violent ends 
+                    <br> And in their triumph die, 
+                    <br> like fire and powder, 
+                    <br>Which, as they kiss, consume.”</i>
+                    <br> (Act 2, Scene 6)
+                </b>
+            </p>
         </div>
         <div class="explanation-section">
             <div class="explanation-text">
-                <p>Juliet&#39;s declaration of boundless love mirrors the idealized, almost divine notion of love in traditional romance. Modern love may still seek depth but often frames it within pragmatic boundaries, such as mutual respect and shared values.</p>
+                <p>Friar Laurence warns against the intensity of impulsive love, highlighting its potential for destruction. 
+                    <br>This resonates with the modern caution about “burnout” in relationships, as contemporary norms emphasize balance and emotional health.</p>
             </div>
         </div>
         <div class="quote-section" id="3">
-            <p><i>“These violent delights have violent ends / And in their triumph die, like fire and powder, / Which, as they kiss, consume.”</i> (Act 2, Scene 6)</p>
+            <p>
+                <b>
+                    <i>“A plague o&#39; both your houses! 
+                    <br> They have made worms&#39; meat of me.”
+                    </i><br> (Act 3, Scene 1)
+                </b>
+            </p>
         </div>
         <div class="explanation-section">
             <div class="explanation-text">
-                <p>Friar Laurence warns against the intensity of impulsive love, highlighting its potential for destruction. This resonates with the modern caution about “burnout” in relationships, as contemporary norms emphasize balance and emotional health.</p>
-            </div>
-        </div>
-        <div class="quote-section" id="4">
-            <p><i>“A plague o&#39; both your houses! / They have made worms&#39; meat of me.”</i> (Act 3, Scene 1)</p>
-        </div>
-        <div class="explanation-section">
-            <div class="explanation-text">
-                <p>Mercutio&#39;s curse on the feuding families underscores how societal norms and external conflicts can affect relationships. While societal expectations shaped traditional romances heavily, modern love often challenges or redefines these norms.</p>
-            </div>
-        </div>
-        <div class="quote-section" id="5">
-            <p><i>“For never was a story of more woe / Than this of Juliet and her Romeo.”</i> (Act 5, Scene 3)</p>
-        </div>
-        <div class="explanation-section">
-            <div class="explanation-text">
-                <p>The tragedy of Romeo and Juliet lies in their inability to reconcile love with the constraints of their world. In contrast, modern love often seeks to overcome such barriers through open-mindedness and flexibility, though challenges persist.</p>
+                <p>Mercutio&#39;s curse on the feuding families underscores how societal norms and external conflicts can affect relationships. 
+                    <br>While societal expectations shaped traditional romances heavily, modern love often challenges or redefines these norms.</p>
             </div>
         </div>
         <iframe id="embed-preview-iframe" loading="eager" src="https://embed.pickaxeproject.com/axe?id=Romeo_LP5II&mode=embed_gold&host=beta&theme=custom&opacity=100&font_header=Real+Head+Pro&size_header=32&font_body=Real+Head+Pro&size_body=20&font_labels=Real+Head+Pro&size_labels=32&font_button=Real+Head+Pro&size_button=16&c_fb=9B111E&c_ff=030303&c_fbd=FFFFFF&c_rb=00234&c_bb=FFFFFF&c_bt=F7F7F7&c_t=FFFFFF&s_ffo=100&s_rbo=100&s_bbo=100&s_f=minimalist&s_b=outline&s_t=1&s_to=0&s_r=0&description=hide" width="80%" height="500px" class="transition hover:translate-y-[-2px] hover:shadow-[0_6px_20px_0px_rgba(0,0,0,0.15)]" style="border:0px solid rgba(0, 0, 0, 1);transition:.3s;border-radius:4px;max-width:700px" frameBorder="0"></iframe>
-        </section>
+    </section>
 
     <!-- Title Section: Chava -->
     <section class="chava">
@@ -84,45 +95,183 @@
                 whereas todays couples frequently celebrate diversity and acceptance In their relationships. 
             </div>
         </div>
-        <div class="quote-section" style="background-image: url('c-scene1.jpg');">
-            <p><i>“Indeed, you are your child&#39;s father,” he said, “but you are blind to what she is doing. She is moving into another world, and you do not understand her, or you don&#39;t want to understand her.”</p>
+        <div class="quote-section" id="1">
+            <p>
+                <b>
+                    <i>Indeed, you are your child&#39;s father,
+                    <br>but you are blind to what she is doing.
+                    <br>She is moving into another world,
+                    <br>and you do not understand her, 
+                    <br>or you don&#39;t want to understand her.</i> 
+                </b>
+            </p>
         </div>
         <div class="explanation-section">
             <div class="explanation-text">
-                <p>This quote occurs during the intense emotional and physical tension between the characters. It explores the conflict between desire and control, reflecting the complex nature of the relationship.</p>
+                <p>This quote highlights the father's blindness to his daughter's actions, symbolizing a generational gap and lack of understanding. 
+                    <br>In a modern context, it reflects how parents often struggle to understand their children's evolving identities or desires, sometimes choosing ignorance or control over connection. It speaks to the tension between desire for independence and parental control in today's world.</p>
             </div>
         </div>
-        <div class="quote-section" style="background-image: url('lc-scene2.jpg');">
-            <p><i>"Love is a dangerous game,"</i> (Lust, Caution)</p>
+        <div class="quote-section" id="2">
+            <p>
+                <b>
+                    <i>'Amazing!' she said 
+                    <br>"You've quotation for everything! 
+                    <br>Maybe you can find one about how people 
+                    <br>separated themselves into Jews 
+                    <br>and Gentiles, into masters and slaves, 
+                    <br>into landlords and beggars?"</i> 
+                    </b>
+            </p>
         </div>
         <div class="explanation-section">
             <div class="explanation-text">
-                <p>This quote highlights the risky emotional and political game that the characters play in the film. It reflects the tension of love when it intersects with power and betrayal.</p>
+                <p>
+                    This quote reflects the shift in how love is viewed over time. Chava challenges love vs tradition through her relationship with Fyedka, showing how love begins to defy societal boundaries. 
+                    <br> In comparison to modern love, it mirrors how many contemporary relationships push against societal norms and expectations, defying boundaries like race, religion, or class to embrace a more inclusive, personal definition of love.
+                </p>
             </div>
         </div>
-        <iframe id="embed-preview-iframe" loading="eager" src="https://embed.pickaxeproject.com/axe?id=Tevye_Y051F&mode=embed_gold&host=beta&theme=custom&opacity=100&font_header=Real+Head+Pro&size_header=32&font_body=Real+Head+Pro&size_body=20&font_labels=Real+Head+Pro&size_labels=32&font_button=Real+Head+Pro&size_button=16&c_fb=2B8DA6&c_ff=030303&c_fbd=FFFFFF&c_rb=00234&c_bb=FFFFFF&c_bt=F7F7F7&c_t=FFFFFF&s_ffo=100&s_rbo=100&s_bbo=100&s_f=minimalist&s_b=outline&s_t=1&s_to=0&s_r=0&description=hide" width="80%" height="500px" class="transition hover:translate-y-[-2px] hover:shadow-[0_6px_20px_0px_rgba(0,0,0,0.15)]" style="border:0px solid rgba(0, 0, 0, 1);transition:.3s;border-radius:4px;max-width:700px" frameBorder="0"></iframe>
+            <iframe id="embed-preview-iframe" 
+            loading="eager" 
+            src="https://embed.pickaxeproject.com/axe?id=Tevye_Y051F&mode=embed_gold&host=beta&theme=custom&opacity=100&font_header=Real+Head+Pro&size_header=32&font_body=Real+Head+Pro&size_body=20&font_labels=Real+Head+Pro&size_labels=32&font_button=Real+Head+Pro&size_button=16&c_fb=2B8DA6&c_ff=030303&c_fbd=FFFFFF&c_rb=00234&c_bb=FFFFFF&c_bt=F7F7F7&c_t=FFFFFF&s_ffo=100&s_rbo=100&s_bbo=100&s_f=minimalist&s_b=outline&s_t=1&s_to=0&s_r=0&description=hide" 
+            width="80%" height="500px" 
+            class="transition hover:translate-y-[-2px] hover:shadow-[0_6px_20px_0px_rgba(0,0,0,0.15)]" 
+            style="border:0px solid rgba(0, 0, 0, 1);transition:.3s;border-radius:4px;max-width:700px; display: block;" 
+            frameBorder="0"></iframe>
     </section>
 
     <section class="lust-caution">
         <div class="title-section"><h1>LUST, CAUTION</h1>
-            <div class="subtitle"><br> Similarly, <b>Lust, Caution</b> reveals love shaped by secrecy and power dynamics, contrasting with the openness and equality many modern couples value. The video highlights how love has transitioned from being shaped by external pressures to becoming a deeply personal, authentic connection, reflecting both individual freedom and evolving values. In a world where love adapts, are we closer to true freedom in relationships, or have new norms simply replaced the old ones?</div>
+            <div class="subtitle"><br> Similarly, <b>Lust, Caution</b> reveals love shaped by secrecy and power dynamics, contrasting with the openness and equality many modern couples value.</div>
         </div>
-        <div class="quote-section" style="background-image: url('lc-scene1.jpg');">
-            <p><i>"You cannot imagine how much I want you,"</i> (Lust, Caution)</p>
+        <div class="quote-section" id="1">
+            <p>
+                <b>
+                <i>The two occasions she had been with Yee, 
+                <br> she had been so tense, so taken up in 
+                <br>saying her lines that there had been no 
+                <br>opportunity to ask herself how she actually felt.</i>
+                </b>
+            </p>
         </div>
         <div class="explanation-section">
             <div class="explanation-text">
-                <p>This quote occurs during the intense emotional and physical tension between the characters. It explores the conflict between desire and control, reflecting the complex nature of the relationship.</p>
+                <p>
+                    Chia-Chih has never really stopped in her relationship with Mr. Yee to consider her actual feelings towards what was going on, preoccupied with getting the job done. 
+                    <br>In a modern context, individuals are encouraged to be aware of their own feelings and communicate them freely, rather than being caught up in a role or societal expectations.
+                </p>
             </div>
         </div>
-        <div class="quote-section" style="background-image: url('lc-scene2.jpg');">
-            <p><i>"Love is a dangerous game,"</i> (Lust, Caution)</p>
+        <div class="quote-section" id="2">
+            <p>
+                <b>
+                    <i>
+                    “He really loves me, she thought.
+                    <br>Inside, she felt a raw tremor of shock
+                    <br>then a vague sense of loss.”
+                    <br>“She must have hated him at the end. 
+                    <br>But real men have to be ruthless. 
+                    <br>She wouldn&apos;t have loved him 
+                    <br>if he&apos;d been the sentimental type.”                           
+                    </i>
+                </b>
+            </p>
         </div>
         <div class="explanation-section">
             <div class="explanation-text">
-                <p>This quote highlights the risky emotional and political game that the characters play in the film. It reflects the tension of love when it intersects with power and betrayal.</p>
+                <p>Chia-Chih's complex feelings reveal a mix of shock, loss, and an acceptance of the harshness in love, 
+                    where she justifies cruelty as part of the relationship&apos;s
+                    intensity and her inability to love someone more tender. 
+                    This sentiment reflects a power imbalance, where love is intertwined with emotional manipulation and control, 
+                    rather than a partnership based on equality and mutual respect. The contrast with modern love is stark: today&apos;s 
+                    relationships are more likely to value emotional vulnerability, equality, and sentimentality, rather than viewing power struggles 
+                    or ruthlessness as part of love's definition.
+            </p>
             </div>
         </div>
-        <iframe id="embed-preview-iframe" loading="eager" src="https://embed.pickaxeproject.com/axe?id=Wong_Cha_Chi_SKDF0&mode=embed_gold&host=beta&theme=custom&opacity=100&font_header=Real+Head+Pro&size_header=32&font_body=Real+Head+Pro&size_body=20&font_labels=Real+Head+Pro&size_labels=32&font_button=Real+Head+Pro&size_button=16&c_fb=164E4E&c_ff=030303&c_fbd=FFFFFF&c_rb=00234&c_bb=FFFFFF&c_bt=F7F7F7&c_t=FFFFFF&s_ffo=100&s_rbo=100&s_bbo=100&s_f=minimalist&s_b=outline&s_t=1&s_to=0&s_r=0&description=hide" width="80%" height="500px" class="transition hover:translate-y-[-2px] hover:shadow-[0_6px_20px_0px_rgba(0,0,0,0.15)]" style="border:0px solid rgba(0, 0, 0, 1);transition:.3s;border-radius:4px;max-width:700px" frameBorder="0"></iframe>
-        </section>
-        </html>
+        <iframe id="embed-preview-iframe" loading="eager" src="https://embed.pickaxeproject.com/axe?id=Wong_Cha_Chi_SKDF0&mode=embed_gold&host=beta&theme=custom&opacity=100&font_header=Real+Head+Pro&size_header=32&font_body=Real+Head+Pro&size_body=20&font_labels=Real+Head+Pro&size_labels=32&font_button=Real+Head+Pro&size_button=16&c_fb=164E4E&c_ff=030303&c_fbd=FFFFFF&c_rb=00234&c_bb=FFFFFF&c_bt=F7F7F7&c_t=FFFFFF&s_ffo=100&s_rbo=100&s_bbo=100&s_f=minimalist&s_b=outline&s_t=1&s_to=0&s_r=0&description=hide" width="80%" height="500px" class="transition hover:translate-y-[-2px] hover:shadow-[0_6px_20px_0px_rgba(0,0,0,0.15)]" style="border:0px solid rgba(0, 0, 0, 1);transition:.3s;border-radius:4px;max-width:700px" frameBorder="0"></iframe>    </section>
+    </section>
+    <section class="contemporary">
+        <div class="title-section"><h1>Now</h1>
+            <div class="subtitle">In this century, love has shifted from simply an obligation to either have children, rise in social standing, or fulfill a deal with parents, to a more commonly convoluted phenomenon. </div>
+        </div>
+        <div class="quote-section" id="1">
+            <p>
+                <b>
+                    <i>
+                        “Are we datin'? 
+                        <br>Are we f***in'? 
+                        <br>Are we best friends? 
+                        <br>Are we somethin' in between that?” 
+                        <br>(Heartbeat, Childish Gambino)                       
+                    </i>
+                </b>
+            </p>
+        </div>
+        <div class="explanation-section">
+            <div class="explanation-text">
+                <p>
+                    We can see that the lyrics of the song demonstrate a "love" where the lines are blurred. 
+                    It&apos;s not clear to the speaker how the other person feels about them, and vice versa. 
+                    Like how Chia-Chih also doesn&apos;t quite understand the relationship she has with 
+                    Mr. Yee. In modern times, love has shifted from an obligation to a choice. 
+                    People can choose a lot more often, and it leads to more complex feelings than what was the 
+                    norm in the past.
+                </p>
+            </div>
+        </div>
+        <div class="quote-section" id="2">
+            <p>
+                <b>
+                    <i>
+                        “I can&apos;t see anything I don&apos;t like about you.” 
+                        <br>“But you will! You will think of things. 
+                        <br>And I&apos;ll get bored with you and feel trapped, 
+                        <br>because that&apos;s what happens with me.” 
+                        <br>(Eternal Sunshine of the Spotless Mind)                    </i>
+                </b>
+            </p>
+        </div>
+        <div class="explanation-section">
+            <div class="explanation-text">
+                <p>
+                    This exchange captures modern fears about long-term commitment, where initial excitement can give way to doubts and dissatisfaction. Unlike traditional, all-consuming love, modern relationships often face challenges like emotional independence and the pressure to maintain connection over time. This shift reflects the complexities of love today, where freedom and self-awareness play a larger role.
+                </p>
+            </div>
+        </div>
+        <iframe id="embed-preview-iframe" loading="eager" src="https://embed.pickaxeproject.com/axe?id=Love_K79Z0&mode=embed_gold&host=beta&theme=custom&opacity=100&font_header=Real+Head+Pro&size_header=32&font_body=Real+Head+Pro&size_body=20&font_labels=Real+Head+Pro&size_labels=32&font_button=Real+Head+Pro&size_button=16&c_fb=9A7A63&c_ff=030303&c_fbd=FFFFFF&c_rb=00234&c_bb=FFFFFF&c_bt=F7F7F7&c_t=FFFFFF&s_ffo=100&s_rbo=100&s_bbo=100&s_f=minimalist&s_b=outline&s_t=1&s_to=0&s_r=0&description=hide" width="80%" height="500px" class="transition hover:translate-y-[-2px] hover:shadow-[0_6px_20px_0px_rgba(0,0,0,0.15)]" style="border:0px solid rgba(0, 0, 0, 1);transition:.3s;border-radius:4px;max-width:700px" frameBorder="0"></iframe>
+    </section>
+    <section class="future">
+        <div class="title-section"> <h1>Tarot</h1>
+            <div class="subtitle">  As we reflect on love&apos;s ever-changing nature, we look to the future.
+                </div>
+        </div>
+        <div class="quote-section" id="1">
+            <p style="width: 80%;;">
+                <b>
+                    <i>
+                        What will love look like in the coming years?
+                        <br> Will it continue to evolve with technological a
+                        <br>dvancements and new societal norms? 
+                        <br>Will love be more self-determined, 
+                        <br>or will it be guided by even more complex structures?    
+                        </i>
+                </b>                
+            </p>
+        </div>
+        <div class="explanation-section">
+            <div class="explanation-text">
+                <p>
+                    Here, we invite you to explore the future of love through a tarot reading. 
+                    <br>Step up to the stand and ask: 
+                    <br>
+                    <B> 
+                        What will my love life be like?
+                    </B>
+                    </p>
+            </div>
+        </div>
+    </section>
+</body>   
+</html>
