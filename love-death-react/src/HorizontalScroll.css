@@ -1,0 +1,259 @@
+﻿/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: "Arial", sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+/* Main horizontal scroll container */
+.horizontal-scroll-wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 1px;
+}
+
+.horizontal-scroll-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 600vw; /* 6 sections  100vw each */
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Individual story sections */
+.story-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* Sticky title - always visible */
+.sticky-title {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 1000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+}
+
+/* Progress indicator */
+.scroll-progress {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  gap: 1rem;
+}
+
+.progress-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.progress-dot.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+/* Section-specific styling */
+.intro-section {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a3a 100%);
+}
+
+.romeo-juliet {
+  background: linear-gradient(135deg, #9B111E 0%, #6d0c15 100%);
+}
+
+.chava {
+  background: linear-gradient(135deg, #2b8da6 0%, #1f6275 100%);
+}
+
+.lust-caution {
+  background: linear-gradient(135deg, #164e4e 0%, #0f3333 100%);
+}
+
+.contemporary {
+  background: linear-gradient(135deg, #9A7A63 0%, #6b5544 100%);
+}
+
+.future {
+  background: linear-gradient(135deg, #5D3F6A 0%, #3d2a44 100%);
+}
+
+/* Content styling */
+.section-content {
+  max-width: 80%;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.quote-text {
+  font-size: 2rem;
+  font-style: italic;
+  margin: 2rem 0;
+  line-height: 1.4;
+}
+
+.explanation-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 2rem 0;
+  opacity: 0.8;
+}
+
+/* Video styling for intro */
+.intro-video {
+  width: 60%;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  margin: 2rem 0;
+}
+
+.play-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.play-icon {
+  width: 80px;
+  height: 80px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.play-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Interactive iframe styling */
+.interactive-iframe {
+  width: 80%;
+  max-width: 700px;
+  height: 500px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  margin: 2rem 0;
+  transition: transform 0.3s ease;
+}
+
+.interactive-iframe:hover {
+  transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll snap for smooth section transitions */
+.horizontal-scroll-wrapper {
+  scroll-snap-type: x mandatory;
+}
+
+.story-section {
+  scroll-snap-align: start;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .quote-text {
+    font-size: 1.5rem;
+  }
+  
+  .sticky-title {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .intro-video {
+    width: 90%;
+  }
+  
+  .section-content {
+    max-width: 95%;
+  }
+}
+
+/* Background patterns for visual interest */
+.story-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  background-image: radial-gradient(circle at 25% 25%, white 2px, transparent 2px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
